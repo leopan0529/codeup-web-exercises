@@ -140,7 +140,10 @@
 
     for(var i=0;i<books.length;i++){
         books[i].BOOK = `${i+1}`
-        console.log(`book # ${books[i].BOOK}\n`,`title : ${books[i].title}\n`,`author: ${books[i].author.firstName} ${books[i].author.lastName}\n---\n`
+        console.log(`
+        book # ${books[i].BOOK}
+        title : ${books[i].title}
+        author: ${books[i].author.firstName} ${books[i].author.lastName}`
             )
     }
 

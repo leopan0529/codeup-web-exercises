@@ -102,53 +102,53 @@
 
 
 
-//
-// let  city = prompt("what city do you live in");
-//
-//
-// if (city === "boston"){
-//     console.log("the location is boston");
-//     console.log("Go Red Sox")
-//
-// }
-// else if (city === "San Antonio"){
-//     console.log("the location is San Antonio")
-//
-// }
-// // else if (city === city){
-// //     console.log(`The location is ${city}`)
-//
-//
-// else {
-//     console.log("idk where it is ")
-// }
-//
+
+let  city = prompt("what city do you live in");
 
 
-// console.log(addNumber("5"));
-//
-//
-// function addNumber(num){
-//     let number;
-//     if (typeof (num) =="string"){
-//         num = parseInt(num)
-//     }
-//     return num+2
-// }
-//
-//
-// let pizaPreference = prompt("what is your fav kind of pizza");
-//
-// if(pizaPreference.toLowerCase() == "cheese" || pizaPreference.toLowerCase() == "pepperoni"){
-//     console.log("Thanks Kevin from Home Alone");
-// }
-// else if (pizaPreference.toLowerCase() == "hotdog") {
-//     console.log("okay")
-//
-// }
-// else {
-//     console.log("okay beast")
-// }
+if (city === "boston"){
+    console.log("the location is boston");
+    console.log("Go Red Sox")
+
+}
+else if (city === "San Antonio"){
+    console.log("the location is San Antonio")
+
+}
+// else if (city === city){
+//     console.log(`The location is ${city}`)
+
+
+else {
+    console.log("idk where it is ")
+}
+
+
+
+console.log(addNumber("5"));
+
+
+function addNumber(num){
+    let number;
+    if (typeof (num) =="string"){
+        num = parseInt(num)
+    }
+    return num+2
+}
+
+
+let pizaPreference = prompt("what is your fav kind of pizza");
+
+if(pizaPreference.toLowerCase() == "cheese" || pizaPreference.toLowerCase() == "pepperoni"){
+    console.log("Thanks Kevin from Home Alone");
+}
+else if (pizaPreference.toLowerCase() == "hotdog") {
+    console.log("okay")
+
+}
+else {
+    console.log("okay beast")
+}
 
 
 let success = true;
