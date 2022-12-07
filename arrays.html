@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)https://java.codeup.com/extra-exercises/javascript/arrays/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>arrays</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { font-weight: bold; } /* Keyword */
+code > span.dt { text-decoration: underline; } /* DataType */
+code > span.co { font-style: italic; } /* Comment */
+code > span.al { font-weight: bold; } /* Alert */
+code > span.er { font-weight: bold; } /* Error */
+code > span.wa { font-style: italic; } /* Warning */
+code > span.cf { font-weight: bold; } /* ControlFlow */
+code > span.pp { font-weight: bold; } /* Preprocessor */
+code > span.do { font-style: italic; } /* Documentation */
+code > span.an { font-style: italic; } /* Annotation */
+code > span.cv { font-style: italic; } /* CommentVar */
+code > span.in { font-style: italic; } /* Information */
+  </style>
+<style>
+* { box-sizing: border-box; font-family: sans-serif; }
+body { max-width: 960px; margin: 0 auto; padding: 0 5px; }
+h1 { margin-top: 0; text-align: center; }
+h2 { margin: 1em 0; }
+ul li, ol li { margin: 0.5em 0; }
+code { font-family: monospace; font-size: 1.35em; padding: 4px; }
+pre { padding: 5px 10px; background: rgb(240, 240, 240); }
+pre code { font-size: inherit; padding: 0; }
+em { font-style: normal; text-decoration: underline; }
+table thead th { vertical-align: bottom; border-bottom: 2px solid #dee2e6; }
+table td, table th { padding: .75rem; vertical-align: top; border-top: 1px solid #dee2e6; }
+table { width: 100%; max-width: 100%; margin-bottom: 1rem; background-color: transparent; }
+tr.odd { background-color: rgba(0, 0, 0, 0.03); }
+@media print { hr { display: block; border: 0; page-break-after: always; } }
+</style>
+</head>
+<body data-new-gr-c-s-check-loaded="14.1088.0" data-gr-ext-installed=""><div id="StayFocusd-infobar" style="display:none;">
+    <img src="chrome-extension://laankejkbhbdhmipfmgcngdelahlfoji/common/img/eye_19x19_red.png">
+    <span id="StayFocusd-infobar-msg"></span>
+    <span id="StayFocusd-infobar-links">
+        <a id="StayFocusd-infobar-never-show">hide forever</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a id="StayFocusd-infobar-hide">hide once</a>
+    </span>
+</div>
+<ul>
+<li><p>Define a function named <code>allIndexesOf</code> that takes in two arguments. The first argument should be the array to search and the second argument should be the value you want to search for. If the item does not exist in the provided array, return an empty array.</p>
+<p>Given:</p>
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript"><span class="kw">var</span> fruits <span class="op">=</span> [<span class="st">"apple"</span><span class="op">,</span> <span class="st">"banana"</span><span class="op">,</span> <span class="st">"orange"</span><span class="op">,</span> <span class="st">"apple"</span><span class="op">,</span> <span class="st">"pineapple"</span>]<span class="op">;</span></code></pre></div>
+<ul>
+<li><code>allIndexesOf(fruits, "apple")</code> should return the array [0, 3]</li>
+<li><code>allIndexesOf(fruits, "guava")</code> should return the array []</li>
+<li><code>allIndexesOf(fruits, "pineapple")</code> should return [4]</li>
+</ul></li>
+<li><p>Define a function named <code>removeAll(array, value)</code> that takes in two arguments. The first argument should be an array and the second argument should be a value you wish to remove</p>
+<p>Given:</p>
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript"><span class="kw">var</span> bugs <span class="op">=</span> [<span class="st">"mosquito"</span><span class="op">,</span> <span class="st">"ant"</span><span class="op">,</span> <span class="st">"scorpion"</span><span class="op">,</span> <span class="st">"ant"</span><span class="op">,</span> <span class="st">"ant"</span><span class="op">,</span> <span class="st">"mosquito"</span><span class="op">,</span> <span class="st">"typo"</span><span class="op">,</span> <span class="st">"reference error"</span><span class="op">,</span> <span class="st">"type error"</span>]<span class="op">;</span></code></pre></div>
+<ul>
+<li><code>removeAll(bugs, "ant")</code> should return <code>["mosquito", "scorpion",   "mosquito", "typo", "reference error", "type error"]</code></li>
+<li><code>removeAll(bugs, "mosquito")</code> should return <code>["ant", "scorpion", "ant",   "ant", "typo", "reference error", "type error"]</code></li>
+<li><code>removeAll(bugs, "roach")</code> should return the original array b/c "roach" has no occurrances.</li>
+</ul></li>
+</ul>
+<hr>
+<ul>
+<li>Make a function called randomIntBetween(min, max) that returns a random number between the min and the max.</li>
+<li>Make a function called <code>coinFlip()</code> that returns either 0 or 1, randomly</li>
+<li>Make a function called <code>twoDice()</code> that returns the sum of rolling two six sided dice.</li>
+<li>Make a function called <code>twentySidedDie()</code> that returns a random integer between 1 and 20.</li>
+<li>Make a function called <code>twelveSidedDie()</code> that returns a random integer between 1 and 12.</li>
+<li>Make a function called <code>tetrahedron()</code> that returns a random integer between 1 and 4.</li>
+</ul>
+<hr>
+<ul>
+<li>Make a function called <code>rollDie()</code> that returns an integer between 1 and 6.</li>
+<li><p>Make a function called <code>listOfRolls(num)</code> that takes in a number containing how many 6-sided dice rolls you want to make. The <code>listOfRolls</code> function should return an array of that length, where each element of the array is the result of the <code>rollDie</code> function.</p></li>
+<li><p>Make a function called <code>listOfRollsFromDieFunc(numberOfRolls, diceFunction)</code></p>
+<p>This function should take in two arguments:</p>
+<ul>
+<li>The first argument is the number of rolls you want to make.</li>
+<li>The second argument is a function that contains the function definition for the type of die you want to roll.</li>
+</ul>
+<p>For example, if we call <code>listOfDieRollsFromDieFunc(1, tetrahedron)</code>, then the function will return an array containing one value that is the result of calling the <code>tetrahedron</code> function.</p></li>
+</ul>
+<hr>
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript">
+<span class="co">/**</span>
+<span class="co"> * JS Array Practice</span>
+<span class="co"> * Intermediate Array practice: array creation, iteration, and manipulation</span>
+<span class="co"> */</span>
+
+<span class="co">// Exercise 0. Write a function named first() that returns only the first element of an array</span>
+
+<span class="co">// Exercise 1. Write a function named secondToLast() that returns the second to last element</span>
+
+<span class="co">// Exercise 2. Write a function named rest() that takes an an array and returns an array containing everything except the first element.</span>
+
+<span class="co">// Exercise 3. Write a function named getLongestString that takes in an array of strings and returns the longest string of that array</span>
+
+<span class="co">// Exercise 3.1 Write a function named getShortestString that takes in an array of strings and returns the shortest string in that array.</span>
+
+<span class="co">// Exercise 4. Write a function named addTwoArrays that takes in two, one dimensional arrays. The function should return a single array containing all of the elements of the first array along with all of the elements of the second array</span>
+<span class="co">// Example: addTwoArrays([1, 2, 3], [4, 5, 6]) should return [1, 2, 3, 4, 5, 6]</span>
+
+<span class="co">// Exercise 5. Write a function named getUniqueValues that takes in an array and returns the array without any duplicates</span>
+<span class="co">// Example: getUniqueValues(["a", "b", "a", "b", "c", "c"]) should return ["a", "b", "c"]</span>
+
+<span class="co">// Exercise 6. Write a function named reverseArray that takes in an array and returns it reversed, but without altering the original array.</span>
+
+<span class="co">// Exercies 7. Write a function named getRandomQuote().</span>
+<span class="co">//   Inside of the function, create an array of strings where each string is a quote or thought you find inspirational</span>
+<span class="co">//   getRandomQuote should generate a random number between 0 and the array's length minus 1</span>
+<span class="co">//   use the randomly generated number as your index</span>
+<span class="co">//   return a random quote.</span>
+
+<span class="co">// Exercise 8. Write a function named getIndexesOf() that takes in two arguments.</span>
+<span class="co">// The first argument should be a specific numeral or character</span>
+<span class="co">// The second argument should be any given string</span>
+<span class="co">// getIndexesOf() should return an array containing all of the indexes of that character in the string</span>
+<span class="co">// Example: getIndexesOf("a", "banana") should return the array [1, 3, 5]</span>
+<span class="co">// Example: getIndexesOf("z", "banana") should return an empty array [] since there are no "z" characters in "banana"</span>
+
+<span class="co">// Exercise 9. Write a function named removeAll.</span>
+<span class="co">// It should accept an array and a value</span>
+<span class="co">// removeAll should return an array with all of the original contents EXCEPT for the provided value</span>
+<span class="co">// iterate across the input array</span>
+<span class="co">// output array</span>
+<span class="co">// Example: removeAll([1, 2, 3], 2) should return [1, 3]</span>
+<span class="co">// Example 2: removeAll([2, 2, 3, 4, 5, 2, 2], 2) should return [3, 4, 5]</span>
+
+<span class="co">// Exercise 10. Write a function named firstTenFibonacciNumbers() that returns an array of the first ten fibonacci numbers</span>
+
+<span class="co">// Exercise 11. Write a function named getNFibonacci(n) that returns an array containing the first n fibonacci numbers</span>
+
+<span class="co">// Exercise 12. Write a function named moveFirstToLast() that takes in an array</span>
+<span class="co">// the function should return the array with the first element at the end</span>
+<span class="co">// Example: moveFirstToLast([1, 2, 3, 4]) should return [2, 3, 4, 1]</span>
+
+
+<span class="co">// Exercise 13. Write a function named zip() that takes in two arrays with the same number of elements</span>
+<span class="co">// Zip returns a new array of arrays where each element is an array of the two elements at the same index</span>
+<span class="co">// Example: zip([1, 2, 3], [4, 5, 6]) returns [[1, 4], [2, 5], [3, 6])</span>
+<span class="co">// Example: zip(["a", "b", "c"], ["x", "y", "z"]) returns [["a", "x"], ["b", "y"], ["c", "z"]]</span></code></pre></div>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
