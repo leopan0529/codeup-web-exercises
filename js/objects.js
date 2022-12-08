@@ -56,9 +56,9 @@
      * represents one shopper. Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
-    // let Cameron = [],
-    //     Ryan = [],
-    //     George = []
+    let Cameron = [],
+        Ryan = [],
+        George = []
 
     let shoppers = [
         {name: 'Cameron', amount: 180},
@@ -78,7 +78,7 @@
     //
     //
     for(var i = 0; i<shoppers.length;i++){
-        console.log(shoppers[i].name)
+        //console.log(shoppers[i].name)
         if(shoppers[i].amount< 200){
             shoppers[i].discount = 0;
             shoppers[i].afterdiscountprice = shoppers[i].amount
@@ -103,9 +103,9 @@
 
 
 
-    // console.log(Cameron,11111111111111111);
-    // console.log(Ryan,22222222222222222);
-    // console.log(George,3333333333333333)
+    console.log(Cameron,11111111111111111);
+    console.log(Ryan,22222222222222222);
+    console.log(George,3333333333333333)
 
 
 
@@ -150,18 +150,20 @@
     ]
 
 
-    console.log(books[0].title,111111111)
-    console.log(books[0].author.firstName,111111111)
+    console.log('title:' + " "+ books[0].title)
+    console.log(`author's firstname:`+ " "+ books[0].author.firstName)
+    console.log(`author's lastname:`+ " "+ books[0].author.lastName)
 
 
-    for(var i=0;i<books.length;i++){
-        books[i].BOOK = `${i+1}`
-        console.log(`
-        book # ${books[i].BOOK}
-        title : ${books[i].title}
-        author: ${books[i].author.firstName} ${books[i].author.lastName}`
-            )
-    }
+
+    // for(var i=0;i<books.length;i++){
+    //     books[i].BOOK = `${i+1}`
+    //     console.log(`
+    //     book # ${books[i].BOOK}
+    //     title : ${books[i].title}
+    //     author: ${books[i].author.firstName} ${books[i].author.lastName}`
+    //         )
+    // }
 
 
 
@@ -203,6 +205,47 @@
      */
 
 })();
+
+
+var books = [ {
+
+    title: "The Salmon of Doubt",
+    author :{
+        firstName: "Douglas",
+        lastName :"Adams"
+    }},
+
+    {
+        title: "atomic habit",
+        author: {
+            firstName: "leo",
+            lastName: "pan"
+        }
+
+
+
+    },
+
+    {
+        title: "biography",
+        author: {
+            firstName: "Jiabin",
+            lastName: "Pan"
+        }}
+]
+
+
+
+
+
+for(var i=0;i<books.length;i++){
+    books[i].BOOK = `${i+1}`
+    console.log(`
+        book # ${books[i].BOOK}
+        title : ${books[i].title}
+        author: ${books[i].author.firstName} ${books[i].author.lastName}`
+    )
+}
 
 
 
