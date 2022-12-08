@@ -193,6 +193,48 @@
      *      ...
      */
 
+
+
+    var books = [ {
+
+        title: "The Salmon of Doubt",
+        author :{
+            firstName: "Douglas",
+            lastName :"Adams"
+        }},
+
+        {
+            title: "atomic habit",
+            author: {
+                firstName: "leo",
+                lastName: "pan"
+            }
+
+
+
+        },
+
+        {
+            title: "biography",
+            author: {
+                firstName: "Jiabin",
+                lastName: "Pan"
+            }}
+    ]
+
+
+
+
+
+    for(var i=0;i<books.length;i++){
+        books[i].BOOK = `${i+1}`
+        console.log(`
+        book # ${books[i].BOOK}
+        title : ${books[i].title}
+        author: ${books[i].author.firstName} ${books[i].author.lastName}`
+        )
+    }
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -207,45 +249,7 @@
 })();
 
 
-var books = [ {
 
-    title: "The Salmon of Doubt",
-    author :{
-        firstName: "Douglas",
-        lastName :"Adams"
-    }},
-
-    {
-        title: "atomic habit",
-        author: {
-            firstName: "leo",
-            lastName: "pan"
-        }
-
-
-
-    },
-
-    {
-        title: "biography",
-        author: {
-            firstName: "Jiabin",
-            lastName: "Pan"
-        }}
-]
-
-
-
-
-
-for(var i=0;i<books.length;i++){
-    books[i].BOOK = `${i+1}`
-    console.log(`
-        book # ${books[i].BOOK}
-        title : ${books[i].title}
-        author: ${books[i].author.firstName} ${books[i].author.lastName}`
-    )
-}
 
 
 
