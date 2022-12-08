@@ -36,12 +36,25 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 
 let analyzeColor = randomColor;
+console.log(analyzeColor)
 
-console.log(analyzeColor);
+
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
+
+switch (analyzeColor){
+    case "red" :
+        result = 0
+        break;
+    case "orange": console.log("orange orange,777"); break;
+    case "yellow" : console.log("yellow,666"); break;
+    case "green": console.log("green,555");break;
+    case "blue" : console.log("blue 111");break;
+    case "indogo": console.log("indigo, 222");break;
+    case "violet": console.log("violet, 333");break;
+    default:console.log("not this time");break;
 
 /**
  * TODO:
@@ -50,6 +63,14 @@ console.log(analyzeColor);
  * function to show it to the user.
  */
 
+prompt("what color do you want ")
+
+let user_color = prompt("what color do you want ")
+
+switch(analyzeColor){
+    case user_color: console.log("correct");break;
+    default:console.log("try again"); break
+}
 /* ########################################################################## */
 
 /**
@@ -70,7 +91,88 @@ console.log(analyzeColor);
  *
  * Test your function by passing it various values and checking for the expected
  * return value.
+ *
+ *
  */
+const total_number = 100
+function calculateTotal(luckynumber,total_number) {
+    if(luckynumber === 5)
+    {
+        return total_number * 0/100;}
+
+    else if(luckynumber === 4)
+    {
+
+        return total_number * 0.5 / 100
+    }
+    else if(luckynumber === 3)
+    {
+        return total_number * 0.35 / 100
+
+    }
+    else if(luckynumber === 2)
+    {
+        return total_number * 0.25 / 100
+    }
+    else if(luckynumber === 1)
+    {
+        return total_number * 0.1 / 100
+    }
+
+
+    else
+    {
+        return total_number * 100 / 100
+    }
+
+
+
+
+
+}
+
+
+function calculatetotal(luckyNum, total){
+    let discount,
+        discountprice;
+    switch(luckyNum){
+
+        case 0:
+            discount = 0;
+            break;
+        case 1:
+            discount = 0.1;
+            break ;
+        case 2:
+            discount = 0.25;
+            break;
+        case 3:
+            discount = 0.35;
+            break;
+        case 4:
+            discount = 0.5;
+            break;
+        case 5:
+            discount = 1;
+            break;
+        default:
+            return "incorrect format"
+
+
+
+    }
+
+    if (!isNaN(total)){
+        discountprice = (total*(1-discount));
+    }
+    else {
+        return "wrong"
+    }
+
+
+    return discountprice.toFixed(2)
+
+}
 
 /**
  * TODO:
@@ -80,8 +182,20 @@ console.log(analyzeColor);
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
-// Generate a random number between 0 and 6
-var luckyNumber = Math.floor(Math.random() * 6);
+//Generate a random number between 0 and 6
+ var luckyNumber = Math.floor(Math.random() * 6);
+
+ var luckyNumber = Math.floor(Math.random() * 6);
+
+ let userNumberPrompt = prompt("what was the total of your bill ?");
+
+ let userResult2 = calculatetotal(luckyNumber,userNumberPrompt)
+
+ alert(`your lucky number was ${luckyNumber}, the price before the discount was $${userNumberPrompt}, the price after the discount is $${userResult2}`);
+
+
+
+
 
 /**
  * TODO:
@@ -101,3 +215,163 @@ var luckyNumber = Math.floor(Math.random() * 6);
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+
+
+
+
+
+
+
+
+var i = 0;
+
+ while (i<3) {
+
+
+     var test = confirm ("would you like to enter a number?");
+
+     if (test) {
+         var num = prompt("what number")
+         var next = numn_game(num);
+
+         var test2 = add_num(next);
+
+         pos_neg(test2)
+         break
+
+     } else {
+        alert("try again")
+
+     }
+     i++
+ }
+
+
+
+function numn_game(num){
+    num === Number(num);
+
+    if (num%2=== 0){
+        alert("this is a even number")
+        return num
+    }
+    else {
+        alert('this is an odd number')
+        return  num
+    }
+
+}
+
+
+
+function add_num(num){
+    var rs = 100+Number(num);
+    alert("what the number plus 100 is {}".replace("{}",rs))
+    return num
+}
+
+function pos_neg(num){
+
+
+    if (num >0) {
+        alert("{} is postive".replace("{}",num))
+    }
+    else {
+        alert("{} is negative".replace("{}",num))
+    }
+}
+
+
+numn_game(num);
+
+
+
+
+
+
+/// extra
+
+
+function isOdd(number){
+
+    if (number%2===0){
+        return "this is even"
+    }
+    else {
+        return "this is odd"
+    }
+}
+
+console.log(isOdd(5))
+
+
+
+var num_1 = Math.floor((Math.random()*1000+900))
+var num_2 = Math.floor(Math.random() * 1000);
+console.log(num_1)
+ function getRandomNumber(min, max){
+
+
+console.log("bob"[0])
+
+
+// function removeFirstCharacter(input){
+//
+//
+//     if(typeof input !== "string") return false;
+//      return (input.length ===0) ? input :input.slice(1);
+//
+// }
+
+
+
+//
+// function  isTrue(input){
+//     let output;
+//     if (input)
+// }
+//
+// function not(input){
+//     let output;
+//
+//     return output
+// }
+
+
+
+
+
+
+function removeFirstCharacter(input){
+    if (typeof input === "string"){
+        if(input.length===1){
+            return '" "'
+        }
+        else {
+            return input.slice(1)
+        }
+
+
+    }
+    else{
+        return false
+    }
+}
+
+
+
+console.log(removeFirstCharacter('bob'), 'ob'); // 'ob'
+console.log(removeFirstCharacter('jason'), 'ason'); // 'ason'
+console.log(removeFirstCharacter('to'), 'o'); // 'o'
+console.log(removeFirstCharacter('1'), ''); // ''
+console.log(removeFirstCharacter(), false); // false
+console.log(removeFirstCharacter(''), ''); // ''
+console.log(removeFirstCharacter('false'), 'alse'); // 'alse'
+console.log(removeFirstCharacter(' codeup'), 'codeup')}} //'codeup'
+
+
+
+
+
+

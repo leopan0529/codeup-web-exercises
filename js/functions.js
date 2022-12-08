@@ -9,6 +9,12 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
+function sayHello(input){
+    return `Hello ${input}`
+}
+
+console.log(sayHello("codeup"))
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -17,6 +23,11 @@
  * console.log 'helloMessage' to check your work
  */
 
+function sayHello(){
+    return 'helloMessage'
+}
+
+console.log(sayHello())
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
@@ -27,6 +38,14 @@
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
 //var random = Math.floor((Math.random() * 3) + 1);
+
+
+
+function sayHello(input){
+    return input
+}
+
+console.log(sayHello("leo"))
 
 /**
  * TODO:
