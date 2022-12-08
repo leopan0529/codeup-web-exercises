@@ -56,15 +56,27 @@
      * represents one shopper. Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
-    let Cameron = [],
-        Ryan = [],
-        George = []
+    // let Cameron = [],
+    //     Ryan = [],
+    //     George = []
 
-    var shoppers = [
+    let shoppers = [
         {name: 'Cameron', amount: 180},
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
     ];
+
+    // shoppers.forEach(function (shopper){
+    //     if(shoppers.amount>200){
+    //         let savings = parseFloat(shoppers.amount)*0.12;
+    //         let total = parseFloat(shopper.amount)-(savings);
+    //         // console.log(`${shopper.name} has a bill of ${shopper.amount.toLocaleString(`en-US`, {style:`currency`,currency:"USD"});
+    //         //
+    //         // savings= savings.to`)
+    //     }
+    // }
+    //
+    //
     for(var i = 0; i<shoppers.length;i++){
         console.log(shoppers[i].name)
         if(shoppers[i].amount< 200){
@@ -86,6 +98,10 @@
         }
 
     }
+
+
+
+
 
     // console.log(Cameron,11111111111111111);
     // console.log(Ryan,22222222222222222);
@@ -190,3 +206,49 @@
 
 
 
+
+
+// let books=[
+//     {
+//         title: "The Hobbit",
+//         author: {
+//             firstName:"J.R.R.",
+//             lastName: "Tolkien"
+//         }
+//
+//
+//     },
+//     {
+//         title: " Of Mice and Men",
+//         author: {
+//             firstName: "John",
+//             lastName: "Steinbeck"
+//         }
+//     },
+//     {
+//         title: "Jurassic Park ",
+//         firstName: "John",
+//         lastName: "Steinbeck"
+//
+//     }
+//
+//
+// ]
+//
+//
+// let book =
+//     {
+//         title: "The Hobbit",
+//             author: {
+//         firstName:"J.R.R.",
+//             lastName: "Tolkien"
+//     }
+//
+//
+//     }
+//
+//
+// console.log(book.title)
+// console.log(book.author.lastName);
+// console.log(book.author.firstName)
+//
