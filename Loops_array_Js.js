@@ -37,24 +37,27 @@ let alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
 
 
-var longstring = ['aaaaaaaaa', 'bbbbbbb','cccccccc','dddd','eeeeee']
-
-
-
-// console.log(Math.max(longstring))
-// console.log(Math.max())
-// function returnlongstring(input){
-//           let length_array = []
-//           for (var i=0; i<input.length-1;i++){
-//               if(input[i].length-input[i+1].length>0){
-//                   console.log(input[i])
-//                   console.log(input[i+1])
-//               }
+// var longstring = ['aaaaaaaaa', 'bbbbbbb','cccccccc','dddd','eeeeee','ffff','asdasdasdasd']
 //
+//
+//
+// // console.log(Math.max(longstring))
+// // console.log(Math.max())
+//
+// var lgth = 0;
+//
+//       var longest;
+//
+//       for (var  i=0;i<longstring.length;i++){
+//           if (longstring[i].length >lgth){
+//               lgth = longstring[i].length;
+//               longest = longstring[i]
 //           }
 //       }
 //
-// returnlongstring(longstring)
+//
+//       console.log(longest)
+
 
 // 4. Create a function that takes in two arrays of elements, including numbers. If all numbers added together in the first array are equal to all the number inputs added in the second array, return true, otherwise, false. Only add together numeric elements but either array may contain non-numeric elements.
 //
@@ -175,73 +178,73 @@ var longstring = ['aaaaaaaaa', 'bbbbbbb','cccccccc','dddd','eeeeee']
 // 3) view all students in alphabetical order
 // 4) view all students in reverse alphabetical
 
-alert("welcome to the student roster management system");
-      let studnet_order = []
-
-
-        let result =7,
-            z = 0
-        while (z<result) {
-            var selection = prompt("What would you like to do: Please choose the following selections:\n" +
-                "1: add a student\n" +
-                "2: delete a student\n"+
-                "3: view all students in alphabetical order\n"+
-                "4: view all students in reverse alphabetical\n"
-
-
-
-
-            )
-            if(selection === null){
-                break
-            }
-            if (Number(selection) === 1) {
-                alert("add a student");
-                var student_name = prompt("please enter student's name ");
-                confirm(`${student_name} has been added from the roster`);
-                studnet_order.push(student_name)
-                z++
-            } else if (Number(selection) === 2) {
-                alert("delete a student");
-                var del_student_name = prompt("please enter student's name ");
-
-                for (var j=0;j<studnet_order.length;j++){
-                    if (del_student_name === studnet_order[j]){
-                        console.log(studnet_order)
-                        studnet_order.splice(j,1)
-
-                    }
-
-
-
-
-           }
-          }
-
-
-
-            else if (Number(selection) === 3) {
-                alert("view all students in alphabetical order");
-                if (studnet_order.length === 0) {
-                    alert("no student has been added in the roster yet")
-                } else if (studnet_order.length > 0) {
-                    alert(studnet_order.sort());
-                }
-
-
-            } else if (Number(selection) === 4) {
-                alert("view all students in reverse alphabetical");
-                if (studnet_order.length === 0) {
-                    alert("no student has been added in the roster yet")
-                } else if (studnet_order.length > 0) {
-                    alert(studnet_order.reverse());
-                }
-            } else {
-                alert("the format is wrong, try again")
-                z++
-            }
-        }
-
-
+// alert("welcome to the student roster management system");
+//       let studnet_order = []
+//
+//
+//         let result =7,
+//             z = 0
+//         while (z<result) {
+//             var selection = prompt("What would you like to do: Please choose the following selections:\n" +
+//                 "1: add a student\n" +
+//                 "2: delete a student\n"+
+//                 "3: view all students in alphabetical order\n"+
+//                 "4: view all students in reverse alphabetical\n"
+//
+//
+//
+//
+//             )
+//             if(selection === null){
+//                 break
+//             }
+//             if (Number(selection) === 1) {
+//                 alert("add a student");
+//                 var student_name = prompt("please enter student's name ");
+//                 confirm(`${student_name} has been added from the roster`);
+//                 studnet_order.push(student_name)
+//                 z++
+//             } else if (Number(selection) === 2) {
+//                 alert("delete a student");
+//                 var del_student_name = prompt("please enter student's name ");
+//
+//                 for (var j=0;j<studnet_order.length;j++){
+//                     if (del_student_name === studnet_order[j]){
+//                         console.log(studnet_order)
+//                         studnet_order.splice(j,1)
+//
+//                     }
+//
+//
+//
+//
+//            }
+//           }
+//
+//
+//
+//             else if (Number(selection) === 3) {
+//                 alert("view all students in alphabetical order");
+//                 if (studnet_order.length === 0) {
+//                     alert("no student has been added in the roster yet")
+//                 } else if (studnet_order.length > 0) {
+//                     alert(studnet_order.sort());
+//                 }
+//
+//
+//             } else if (Number(selection) === 4) {
+//                 alert("view all students in reverse alphabetical");
+//                 if (studnet_order.length === 0) {
+//                     alert("no student has been added in the roster yet")
+//                 } else if (studnet_order.length > 0) {
+//                     alert(studnet_order.reverse());
+//                 }
+//             } else {
+//                 alert("the format is wrong, try again")
+//                 z++
+//             }
+//         }
+//
+//
 
 
