@@ -148,9 +148,100 @@ var longstring = ['aaaaaaaaa', 'bbbbbbb','cccccccc','dddd','eeeeee']
 //
 // Example Input: "codingchallenge25"
 // Example Output: "No"
+
+// function stringnumberappend(input){
+//     input_split= input.split("");
+//     //console.log(input_split)
+//     input_split_length = input_split.length;
+//     //console.log(input_split_length)
+//     if(Number(input_split[input_split_length-1]) === input_split_length){
+//         return true
+//     }
+//     else {
+//         return false
+//     }
+// }
+
 //
-// 7. Create a student roster management app. Using the user dialogue functions (alert, confirm, prompt), create an application that will prompt the user to choose from a menu with the following actions:
+// console.log(stringnumberappend("aaaaaaaa9"))
+//
+// console.log(stringnumberappend("codingchallenge25"))
+
+//
+// 7. Create a student roster management app. Using the user dialogue functions (alert, confirm, prompt),
+// create an application that will prompt the user to choose from a menu with the following actions:
 //     1) add a student
 // 2) delete a student
 // 3) view all students in alphabetical order
 // 4) view all students in reverse alphabetical
+
+alert("welcome to the student roster management system");
+      let studnet_order = []
+
+
+        let result =7,
+            z = 0
+        while (z<result) {
+            var selection = prompt("What would you like to do: Please choose the following selections:\n" +
+                "1: add a student\n" +
+                "2: delete a student\n"+
+                "3: view all students in alphabetical order\n"+
+                "4: view all students in reverse alphabetical\n"
+
+
+
+
+            )
+            if(selection === null){
+                break
+            }
+            if (Number(selection) === 1) {
+                alert("add a student");
+                var student_name = prompt("please enter student's name ");
+                confirm(`${student_name} has been added from the roster`);
+                studnet_order.push(student_name)
+                z++
+            } else if (Number(selection) === 2) {
+                alert("delete a student");
+                var del_student_name = prompt("please enter student's name ");
+
+                for (var j=0;j<studnet_order.length;j++){
+                    if (del_student_name === studnet_order[j]){
+                        console.log(studnet_order)
+                        studnet_order.splice(j,1)
+
+                    }
+
+
+
+
+           }
+          }
+
+
+
+            else if (Number(selection) === 3) {
+                alert("view all students in alphabetical order");
+                if (studnet_order.length === 0) {
+                    alert("no student has been added in the roster yet")
+                } else if (studnet_order.length > 0) {
+                    alert(studnet_order.sort());
+                }
+
+
+            } else if (Number(selection) === 4) {
+                alert("view all students in reverse alphabetical");
+                if (studnet_order.length === 0) {
+                    alert("no student has been added in the roster yet")
+                } else if (studnet_order.length > 0) {
+                    alert(studnet_order.reverse());
+                }
+            } else {
+                alert("the format is wrong, try again")
+                z++
+            }
+        }
+
+
+
+
