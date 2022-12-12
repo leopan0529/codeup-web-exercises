@@ -1,0 +1,51 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.page-wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height:100vh;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.row{
+
+    display: flex;
+    width:100%;
+    max-width: 1000px;
+    background-color: red;
+    padding: 10px;
+}
+
+
+.column{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: green;
+
+
+}
+
+
+.container.header-container{
+
+    background-color: black;
+}
+
+
+.column .col-shrink{
+
+}
