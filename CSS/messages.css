@@ -14,25 +14,30 @@ body, html {
 }
 
 .message-success{
-    background-color: #D6F2DC;
+    --main-bg-color:#D6F2DC;
+    background-color: var(--main-bg-color);
     padding: 5px;
     color:#4B8258 ;
     margin: 5px;
 }
 
 .message-warning{
-    background-color: #FCFBCE;
+    --main-bg-color:#D6F2DC;
+    --text-bg-color:#9B8D44;
+    background-color: var(--main-bg-color);
     padding: 5px;
-    color:#9B8D44 ;
+    color:var(--text-bg-color) ;
     margin: 5px;
 
 }
 
 
 .message-error{
-    background-color: #F4D4D7;
+    --main-bg-color:#F4D4D7;
+    --text-bg-color:#8D4050;
+    background-color: var(--main-bg-color);
     padding: 5px;
-    color:#8D4050 ;
+    color:var(--text-bg-color) ;
     margin: 5px;
 
 }
