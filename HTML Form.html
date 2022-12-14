@@ -98,13 +98,42 @@
 
 
         <label for="waiver">I am over 18 years-of-age and I have read this waiver and am familiar with its content*</label>
-        <div> <input id="waiver"
-                     name="waiver"
-                     type="text"
-                     value=""></div>
+        <div>
+            <div> <input id="waiver"
+                         name="Terms & Conditions"
+                         type="text"
+                         value=""></div>
+
+<!--        <script>-->
+<!--            // 获取canvas标签-->
+<!--            const cvs = document.getElementById('waiver');-->
+<!--            //获取Context对象（渲染实例）-->
+<!--            const ctx = cvs.getContext('2d');-->
+<!--            //变量开关-->
+<!--            let isDrawing = false;-->
+<!--            //鼠标按下事件-->
+<!--            cvs.addEventListener('mousedown', e => {-->
+<!--                isDrawing = true;-->
+<!--                ctx.moveTo(e.pageX, e.pageY);-->
+<!--            });-->
+<!--            //鼠标移动事件-->
+<!--            cvs.addEventListener('mousemove', e => {-->
+<!--                if(isDrawing) {-->
+<!--                    ctx.lineTo(e.pageX, e.pageY);-->
+<!--                    ctx.stroke();-->
+<!--                }-->
+<!--            });-->
+<!--            //鼠标抬起事件-->
+<!--            cvs.addEventListener('mouseup', e => {-->
+<!--                isDrawing = false;-->
+<!--            });-->
+<!--        </script>-->
+
 
 
         <input type="submit">
+
+        <button type="submit">Submit the form</button>
 
 
 
