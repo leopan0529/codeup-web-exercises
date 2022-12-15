@@ -19,7 +19,7 @@ body, html {
 
 
 .container{
-    margin: 2em;
+    margin-top: 2em;
 
 }
 header {
@@ -66,7 +66,6 @@ a {
 
 .profile-details{
     float: left;
-    width: 25%;
     width: calc(25% - 1em);
     margin-top: 0;
     margin-bottom: 0;
@@ -76,7 +75,6 @@ a {
 }
 .timeline{
     float: left;
-    width: 50%;
     width: calc(50% - 1em);
     margin-left: 0.5em;
     margin-right: 0.5em;
@@ -87,10 +85,7 @@ a {
 .who-to-follow{
     float: left;
     width: calc(25% - 1em);
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+    margin: 0 0.5em;
 }
 .profile-image{
     position: absolute;
@@ -108,6 +103,7 @@ a {
     bottom: 1px;
     padding: 0.5em;
     overflow: auto;
+    border-bottom: 1px solid lightgrey;
 }
 
 .media-image{
@@ -118,7 +114,7 @@ a {
 
 
 .media-body{
-    max-width: 600px;
+    max-width: 500px;
     float: left;
 }
 .btn {
