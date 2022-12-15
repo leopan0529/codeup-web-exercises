@@ -6,11 +6,23 @@ body, html {
     font-family: Arial, Ubuntu, sans-serif;
 }
 
+
+
+.message{
+
+    margin: 1em auto;
+    padding: 0.5em;
+    border: 1px solid lightgrey;
+    width: 70%;
+    border-radius: 5px;
+
+
+}
 .message-info{
     background-color: #D0DEFC;
     padding: 5px;
     color: #5451A4;
-    margin: 5px;
+    /*margin: 5px;*/
 }
 
 .message-success{
@@ -18,7 +30,7 @@ body, html {
     background-color: var(--main-bg-color);
     padding: 5px;
     color:#4B8258 ;
-    margin: 5px;
+    /*margin: 5px;*/
 }
 
 .message-warning{
@@ -27,7 +39,7 @@ body, html {
     background-color: var(--main-bg-color);
     padding: 5px;
     color:var(--text-bg-color) ;
-    margin: 5px;
+    /*margin: 5px;*/
 
 }
 
@@ -38,6 +50,7 @@ body, html {
     background-color: var(--main-bg-color);
     padding: 5px;
     color:var(--text-bg-color) ;
-    margin: 5px;
+    /*margin: 5px;*/
 
 }
+

@@ -87,6 +87,7 @@ fieldset {
 }
 
 .form-control {
+    box-sizing: border-box;
     padding-top: 4px;
     padding-bottom: 4px;
     margin-top: 0.5em;
@@ -97,7 +98,7 @@ fieldset {
     /* You'll need to use the `calc` function to make the width of this element match the width of the button */
     /* See the example at: https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
     /* HINT: Examples are available at: https://glitch.com/~input-button-width */
-    width:calc(100%- 2px);
+    width:100%;
 }
 
 
