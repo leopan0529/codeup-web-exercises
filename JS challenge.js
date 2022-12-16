@@ -16,40 +16,50 @@ const pets = [
         age: 5
     },
     {
-        name: 'Pickles',
+        name: 'Beans',
         type: 'Dog',
-        age: 10
+        age: 3
+    },
+    {
+        name: 'Mr. Salmon',
+        type: 'Fish',
+        age: 1
     }
-
 ];
 
-var new_pet =[]
-var result =0
-for (var i=0;i<pets.length;i++){
-    console.log(pets[i])
-    if(pets[i].type==="fish"){
-        continue
-    }
-    else {
-        new_pet.push(pets[i])
-    }
-
-}
-console.log()
-
-
+// var new_pet =[]
+// var result =0
+// for (var i=0;i<pets.length;i++){
+//     console.log(pets[i])
+//     if(pets[i].type==="fish"){
+//         continue
+//     }
+//     else {
+//         new_pet.push(pets[i])
+//     }
+//
+// }
+// console.log()
 
 
+
+var longest=0
+var longest_name
 function findAverageDogAge(input){
-    var new_pet =[]
     for (var i=0;i<input.length;i++){
-        console.log(pets[i])
-        if(input[i].type==="Dog" || input[i].type==="Cat"){
-            new_pet.push(input[i])
+        console.log(pets[i].name.length)
+        if(input[i].name.length>longest){
+            longest = input[i].name.length
+            console.log(longest,2222,input[i].name)
+            longest_name = input[i].name
+
         }
 
     }
-return new_pet
+ return longest_name
 }
 
 console.log(findAverageDogAge(pets),1111)
+
+
+
