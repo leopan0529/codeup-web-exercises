@@ -17,30 +17,37 @@
       width: 100%;
       border: 3px solid goldenrod;
       display: flex;
-      flex-direction: row;
-      justify-content:flex-start;
-        align-items:center;
-      height: 20em;
+      /*flex-direction: row;*/
+      /*justify-content:flex-start;*/
+        /*align-items:flex-start;*/
+      height: 10em
     }
     .flex-item {
       background: #BFD45D;
-      border: 2px solid #F9EFD6;
+      border: 3px solid #F9EFD6;
       padding: 1em;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .item-1{
-        order: 0;
+    /*.item-1{*/
+    /*    order: 0;*/
 
+    /*}*/
+    /*.item-2{*/
+    /*    order: -1;*/
+
+    /*}*/
+    .flex-item:nth-of-type(3){
+       margin-right: auto;
+    /**/
     }
-    .item-2{
-        order: -1;
-
+    .flex-item:nth-child(3){
+        /*margin-right: auto;*/
+        margin-left: auto;
     }
 
-    .item-3{
-        order: -2;
 
-    }
   </style>
 </head>
 <body>
