@@ -69,18 +69,54 @@ const pets = [
 
 
 
-var new_data = []
-function filterList(input){
-    for (var i=0;i<input.length;i++){
-        if (typeof input[i] === "number"){
-            new_data.push(input[i])
-        }
+// var new_data = []
+// function filterList(input){
+//     for (var i=0;i<input.length;i++){
+//         if (typeof input[i] === "number"){
+//             new_data.push(input[i])
+//         }
+//
+//     }
+//     return new_data
+// }
+//
+//
+// console.log(filterList([1,2,"a","b"]))
+// console.log(filterList([1,'a','b',0,15]))
+// console.log(filterList([1,2,'aasf','1','123',123]))
 
+
+function  zipArrays(a,b){
+    var data_list =[]
+    if(a ===[] || b=== []){
+        return []
     }
-    return new_data
+    else {
+        for(var i=0;i<a.length;i++){
+            // data_list.push(a[i])
+            console.log(a[i],i)
+             data_list.push(a[i])
+
+            for(var j=0;j<b.length;j++){
+                console.log(b[j],j)
+               data_list.push(b[j])
+                if (j>i){
+                   break
+                }
+              break
+            }
+        }
+    }
+    return data_list
 }
 
+// // console.log(zipArrays([1], [2]))
+// console.log(zipArrays(['a', 'b'], ['c', 'd']))
+// // console.log(zipArrays([1,2,'a','b'], ['bob', null, 'sally', 25]))
 
-console.log(filterList([1,2,"a","b"]))
-console.log(filterList([1,'a','b',0,15]))
-console.log(filterList([1,2,'aasf','1','123',123]))
+
+
+// setInterval(function (){
+//     console.log("Runs")
+// },2000)
+
