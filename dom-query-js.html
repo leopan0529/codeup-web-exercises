@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)https://java.codeup.com/examples/javascript/dom-query-js.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>DOM: Query and Modify</title>
+</head>
+<body data-new-gr-c-s-check-loaded="14.1093.0" data-gr-ext-installed=""><div id="StayFocusd-infobar" style="display:none;">
+    <img src="chrome-extension://laankejkbhbdhmipfmgcngdelahlfoji/common/img/eye_19x19_red.png">
+    <span id="StayFocusd-infobar-msg"></span>
+    <span id="StayFocusd-infobar-links">
+        <a id="StayFocusd-infobar-never-show">hide forever</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a id="StayFocusd-infobar-hide">hide once</a>
+    </span>
+</div>
+
+<h1 id="main-header">Hello World!</h1>
+<ul>
+    <li data-dbid="1">Item 1</li>
+    <li data-dbid="2">Item 2</li>
+    <li data-dbid="3">Item 3</li>
+    <li data-dbid="4">Item 4</li>
+    <li data-dbid="5">Item 5</li>
+</ul>
+<h2 id="sub-header">Hello Again.</h2>
+<p class="sub-paragraph">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+    aliquip ex ea commodo consequat. Duis aute irure dolor in
+    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+    culpa qui officia deserunt mollit anim id est laborum.
+</p>
+
+<ul style="display: inline-block;">
+    <li><button id="btn1">Set inner html of mainHeader to "JavaScript is Cool</button></li>
+    <li><button id="btn2">Set the text color of subHeader to blue</button></li>
+    <li><button id="btn3">Set text color on every other list item to grey</button></li>
+    <li><button id="btn4">Set text color of li with dbid = 1 to blue</button></li>
+    <li><button id="btn5"> Change the text in the first sub paragraph to "Mission Accomplished!"</button></li>
+    <li><button id="btn6">nuke</button></li>
+</ul>
+
+
+
+
+
+
+
+
+
+<script>
+
+
+    var listner = function (event){
+        var mainHeader = document.getElementById("main-header");
+        mainHeader.innerHTML="JavaScript is Cool"
+
+    }
+
+    var listenr1 = function (event){
+        var subHeader = document.getElementById("sub-header");
+        subHeader.style.color="blue"
+    }
+
+    var listner2 =function (event){
+
+        var listItems = document.querySelectorAll("ul li");
+        for(var i=0;i<listItems.length;i+=2){
+                    listItems[i].style.color="grey"
+                }
+
+    }
+
+    var listner3 =function (event){
+
+        var listItems = document.querySelectorAll("ul li");
+        for(var i=0;i<listItems.length;i++){
+                   if (listItems[i].getAttribute("data-dbid")==="1"){
+                      listItems[i].style.color = "blue"
+                   }
+                }
+
+    }
+
+    var listner4 =function (event){
+
+        var subParagraphs = document.querySelector(".sub-paragraph")
+        subParagraphs.innerHTML="Mission Accomplished!"
+
+    }
+
+    var listner5 = function (event){
+        var nuke = document.createElement("video")
+        nuke.src="./img/nuke_movie.mov";
+        nuke.autoplay = true;
+        var sub = document.getElementById("btn6")
+        sub.append(nuke)
+
+    }
+
+
+
+
+    var btn1 = document.getElementById('btn1');
+    btn1.addEventListener('click', listner);
+
+    var btn2 = document.getElementById('btn2');
+    btn2.addEventListener('click', listenr1);
+    var btn3 = document.getElementById('btn3');
+    btn3.addEventListener('click', listner2);
+
+    var btn4 = document.getElementById('btn4');
+    btn4.addEventListener('click', listner3);
+
+    var btn5 = document.getElementById('btn5');
+    btn5.addEventListener('click', listner4);
+
+    var btn6 = document.getElementById('btn6');
+    btn6.addEventListener('click', listner5);
+
+
+
+
+
+    // (function() {
+    //     "use strict";
+    //     // TODO: Uncomment next line and get the main header element by id
+    //     var mainHeader = document.getElementById("main-header");
+    //
+    //     // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+    //         mainHeader.innerHTML="JavaScript is Cool"
+    //     // TODO: Uncomment the next line and get the sub header element by id
+    //     var subHeader = document.getElementById("sub-header");
+    //     console.log(subHeader.innerText)
+    //     // TODO: Set the text color of subHeader to blue
+    //     subHeader.style.color="blue"
+    //     // subHeader.innerHTML="<h2 style='color: blue'>Hello Again.</h2>"
+    //     // TODO: Uncomment the next line and get all list items
+    //     var listItems = document.querySelectorAll("ul li");
+    //     console.log(listItems,1111)
+    //     // TODO: Set text color on every other list item to grey
+    //     // TODO: Set text color of li with dbid = 1 to blue
+    //     for(var i=0;i<listItems.length;i+=2){
+    //         listItems[i].style.color="grey"
+    //     }
+    //
+    //     for(var i=0;i<listItems.length;i++){
+    //        if (listItems[i].getAttribute("data-dbid")==="1"){
+    //           listItems[i].style.color = "blue"
+    //        }
+    //     }
+    //
+    //
+    //
+    //     // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+    //     var subParagraphs = document.querySelector(".sub-paragraph")
+    //     console.log(subParagraphs,111)
+    //
+    //
+    //     // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+    //     subParagraphs.innerHTML="Mission Accomplished!"
+    // })();
+</script>
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
