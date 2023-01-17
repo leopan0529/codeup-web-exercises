@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+  <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script src="./js/jquery-3.6.3.js"> </script>
+<script>
+  "use strict";
+  var data_list =[]
+  $(document).keyup(function(event){
+
+
+    var knoami_code = event.keyCode
+
+    data_list.push(knoami_code)
+    if (data_list.length === 11){
+      console.log(data_list)
+      compare(data_list)
+    }
+
+    // console.log(event.keyCode);
+  });
+
+
+  function compare(data_list){
+    console.log('aaa')
+    var knoami_list = [38,38,40,40,37,39,37,39,66,65,13]
+    for(var i =0;i<knoami_list.length;i++){
+      console.log(data_list[i],111)
+      if(data_list[i] !== knoami_list[i]){
+          return false
+        }
+    }
+    return  alert("You have added 30 lives!")
+  }
+</script>
+</body>
+</html>

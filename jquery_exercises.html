@@ -67,7 +67,23 @@
 
 
 
-    $(document).ready(function (){
+    $(document).ready(function () {
+
+        $('.menu .close-menu').click(function (){
+            $('.mobile-menu').toggleClass('open')
+        });
+        $('#filter').keydown(function (event){
+            let text = $(this).value();
+            $('li').each(function (){
+                let liText = $(this).text();
+                if (text === liText){
+                    $(this).show()
+                }
+                else {
+                    $(this).hide()
+                }
+            })
+        })
 
         // function handleover(){
         //     alert('login, function goes here')
@@ -90,7 +106,6 @@
         // $loginBtn.on('mouseover',function (){
         //     $(this).css('background-color','yellow')
         // })
-
 
 
         // $('li').on('click',function (){
@@ -117,20 +132,21 @@
         //     $(this).css(backG
         // }
 
-        $('h1').click(function (){
-          $(this).css('background-color','red')
-        })
-        $('P').dblclick(function (){
-            $(this).css({"font-size":" 101px"})
-        })
-        $('li').hover(
-            function (){
-                $(this).css('background-color', '#FF0')},
-            function (){
-                $(this).css('background-color', '')
-
-        })
-
+        //     $('h1').click(function (){
+        //       $(this).css('background-color','red')
+        //     })
+        //     $('P').dblclick(function (){
+        //         $(this).css({"font-size":" 101px"})
+        //     })
+        //     $('li').hover(
+        //         function (){
+        //             $(this).css('background-color', '#FF0')},
+        //         function (){
+        //             $(this).css('background-color', '')
+        //
+        //     })
+        //
+        // })
     })
 
 
