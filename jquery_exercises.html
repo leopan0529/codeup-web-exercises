@@ -37,14 +37,17 @@
 <div id="div_important" >THIS IS A DIV, very important </div>
 
 
+<button id="login">submit</button>
+
+
 <script>
     <!--Use jQuery to select an element by the id. Alert the contents of the element.-->
-    var contents = $('#codeup').html();
+    // var contents = $('#codeup').html();
     // alert(contents)
     // Update the jQuery code to select and alert a different id.
-    var content_2 = $('#div_important').html()
-    var content_3 = $('#Lorem').html()
-    alert(content_3)
+    // var content_2 = $('#div_important').html()
+    // var content_3 = $('#Lorem').html()
+    // alert(content_3)
     // console.log(content_2)
     // alert(content_2)
     // Using jQuery, create a border around all elements with the class codeup that is 1 pixel wide and red.
@@ -57,27 +60,77 @@
     // Using jQuery, set the font-size of all li elements to 20px.
     // $('li').css({"font-size":" 200px"})
 
-    var content  = $('h1').html()
-
-    console.log(content,11)
-    alert(content)
+    // var content  = $('h1').html()
+    //
+    // console.log(content,11)
+    // alert(content)
 
 
 
     $(document).ready(function (){
-        $('li').on('click',function (){
-            // find the UL parents
-           let $parentUl = $(this).parent('ul');
-           console.log($parentUl,2222)
-            // use the parents to find the kids
-           let $listItems = $parentUl.find('li');
-           console.log($listItems);
-           $listItems.addClass('red-border');
-        });
 
-        $('h1,p,li').css({
-            backgroundColor:'yellow'
+        // function handleover(){
+        //     alert('login, function goes here')
+        // }
+
+        // document.querySelector('#login').addEventListener('click',handleover)
+        //
+        // using jquery to add event for dbclick
+        // $('#login').dblclick(handleover)
+        // js way to add event listener
+        // document.querySelector('#login').addEventListener('click',function (){
+        //
+        // })
+
+        // let $loginBtn = $('#login');
+        // $loginBtn.click(function (){
+        //     alert('login, function goes here')
+        //
+        // })
+        // $loginBtn.on('mouseover',function (){
+        //     $(this).css('background-color','yellow')
+        // })
+
+
+
+        // $('li').on('click',function (){
+        //     // find the UL parents
+        //    let $parentUl = $(this).parent('ul');
+        //    console.log($parentUl,2222)
+        //     // use the parents to find the kids
+        //    let $listItems = $parentUl.find('li');
+        //    console.log($listItems);
+        //    $listItems.addClass('red-border');
+        // });
+        //
+        // $('h1,p,li').css({
+        //     backgroundColor:'yellow'
+        // })
+
+        // document.querySelectorAll('.login').forEach(function (element){
+        //     element.addEventListener('click',function (){
+        //         this.setAttribute('style','background-color: red');
+        //     });
+        // })
+
+        // function mouseover(){
+        //     $(this).css(backG
+        // }
+
+        $('h1').click(function (){
+          $(this).css('background-color','red')
         })
+        $('P').dblclick(function (){
+            $(this).css({"font-size":" 101px"})
+        })
+        $('li').hover(
+            function (){
+                $(this).css('background-color', '#FF0')},
+            function (){
+                $(this).css('background-color', '')
+
+        })
+
     })
 
 
