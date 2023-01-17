@@ -3,6 +3,20 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <title>DOM: Query and Modify</title>
+
+    <style>
+
+        .buttons{
+            display: flex;
+            flex-direction: row;
+            justify-content:space-evenly;
+
+        }
+        button{
+            margin: 5px;
+        }
+
+    </style>
 </head>
 <body data-new-gr-c-s-check-loaded="14.1093.0" data-gr-ext-installed=""><div id="StayFocusd-infobar" style="display:none;">
     <img src="chrome-extension://laankejkbhbdhmipfmgcngdelahlfoji/common/img/eye_19x19_red.png">
@@ -31,15 +45,16 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
+<div class="buttons">
 
-<ul style="display: inline-block;">
-    <li><button id="btn1">Set inner html of mainHeader to "JavaScript is Cool</button></li>
-    <li><button id="btn2">Set the text color of subHeader to blue</button></li>
-    <li><button id="btn3">Set text color on every other list item to grey</button></li>
-    <li><button id="btn4">Set text color of li with dbid = 1 to blue</button></li>
-    <li><button id="btn5"> Change the text in the first sub paragraph to "Mission Accomplished!"</button></li>
-    <li><button id="btn6">nuke</button></li>
-</ul>
+    <button id="btn1">Set inner html of mainHeader to "JavaScript is Cool</button>
+    <button id="btn2">Set the text color of subHeader to blue</button>
+    <button id="btn3">Set text color on every other list item to grey</button>
+    <button id="btn4">Set text color of li with dbid = 1 to blue</button>
+    <button id="btn5">hange the text in the first sub paragraph to "Mission Accomplished!"</button>
+    <button id="btn6">Nuke</button>
+
+</div>
 
 
 
@@ -92,10 +107,13 @@
 
     var listner5 = function (event){
         var nuke = document.createElement("video")
-        nuke.src="./img/nuke_movie.mov";
+        nuke.src="./img/nuke_movie.mov"
         nuke.autoplay = true;
-        var sub = document.getElementById("btn6")
-        sub.append(nuke)
+        var sub = document.querySelector(".buttons")
+        console.log(sub,111)
+        window.append(sub)
+        // btn6.remove()
+        // sub.append(nuke)
 
     }
 
