@@ -126,29 +126,29 @@ function  zipArrays(a,b){
 // Write a function, getUserCredentials, that takes in a list of user objects and returns a list of user objects with only the username and password properties. Assume at least an array of one user object.
 //
 //
-    const users = [
-    {
-        firstName: 'Justin',
-        lastName: 'Reich',
-        dob: '1923-01-01',
-        username: 'jreich',
-        password: '$2y$10$UJlsa5vWq5DUKJjyO38gM.dCZfudWOFCrLWQosh0mhXKaZmRmvDse'
-    },
-    {
-        firstName: 'Sally',
-        lastName: 'Smith',
-        dob: '1935-03-11',
-        username: 'ssmith',
-        password: '$2y$10$VaLGU5.7uQLr.eg6kSI9seOcP4JY4XktWt28I9JgblAGIDpkDXbya'
-    },
-    {
-        firstName: 'Fred',
-        lastName: 'Smith',
-        dob: '1999-01-21',
-        username: 'fsmith',
-        password: '$2y$10$3USt6Dl8TNMkeh0KioPnfeVpynAotXvSIJ5xrzAHragPEAWMYEBNS'
-    },
-]
+//     const users = [
+//     {
+//         firstName: 'Justin',
+//         lastName: 'Reich',
+//         dob: '1923-01-01',
+//         username: 'jreich',
+//         password: '$2y$10$UJlsa5vWq5DUKJjyO38gM.dCZfudWOFCrLWQosh0mhXKaZmRmvDse'
+//     },
+//     {
+//         firstName: 'Sally',
+//         lastName: 'Smith',
+//         dob: '1935-03-11',
+//         username: 'ssmith',
+//         password: '$2y$10$VaLGU5.7uQLr.eg6kSI9seOcP4JY4XktWt28I9JgblAGIDpkDXbya'
+//     },
+//     {
+//         firstName: 'Fred',
+//         lastName: 'Smith',
+//         dob: '1999-01-21',
+//         username: 'fsmith',
+//         password: '$2y$10$3USt6Dl8TNMkeh0KioPnfeVpynAotXvSIJ5xrzAHragPEAWMYEBNS'
+//     },
+// ]
 //
 // getUserCredentials(users) // returns...
 //
@@ -171,19 +171,84 @@ function  zipArrays(a,b){
 //
 // */
 
+//
+// function getUserCredentials(users){
+//
+//     for(var i=0;i<users.length;i++){
+//             delete users[i].firstName;
+//             delete users[i].dob;
+//             delete users[i].lastName
+//
+//     }
+//     return users
+//
+// }
+//
+//
+// console.log(getUserCredentials(users))
 
-function getUserCredentials(users){
 
-    for(var i=0;i<users.length;i++){
-            delete users[i].firstName;
-            delete users[i].dob;
-            delete users[i].lastName
+// Create a function, encodeStr, that takes in a string and returns the string of characters with the following substitutions:
+//
+// ‘a’ or ‘A’ becomes ‘@’
+// ‘i’ or ‘I’ becomes ‘1’
+// ‘s’ or ‘S’ becomes ‘$’
+//
+
+function encodeStr(input){
+    var new_array=[]
+    for(let i=0;i<input.length;i++){
+        new_array.push(input[i])
+
 
     }
-    return users
+
+    for (var j=0;j<new_array.length;j++){
+        // console.log(new_array)
+        // console.log(new_array[j],22)
+        if (new_array[j].toLowerCase()==="a"){
+            new_array[j] = "@"
+            var new_new_array =new_array.join("")
+            // console.log(new_array,222)
+        }
+        else if (new_array[j].toLowerCase()==="i"){
+            // console.log(new_array[j])
+            new_array[j] = "1"
+            // console.log('bikasdsad')
+            var new_new_array =new_array.join("")
+            // console.log(new_array,333)
+        }
+        else if (new_array[j].toLowerCase()==="s"){
+            new_array[j] = "$"
+            var new_new_array =new_array.join("")
+            // console.log(new_array,555)
+        }
+
+        else{
+            // console.log("im here")
+            // console.log(new_array)
+            new_new_array= new_array.join("")
+            // return new_new_array
+        }
+
+
+    }
+
+    return new_new_array
+
 
 }
 
 
-console.log(getUserCredentials(users))
+console.log(encodeStr('apple'),111)
+console.log(encodeStr('codeup'),222)
+console.log(encodeStr('SASS'),33)
+console.log(encodeStr("bike"),454)
+
+//
+// var test = "apple"
+//
+// for(var j=0;j<test.length;j++){
+//     console.log(test[j],111)
+// }
 

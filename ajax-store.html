@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://java.codeup.com/examples/javascript/ajax-store.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Online Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body data-new-gr-c-s-check-loaded="14.1094.0" data-gr-ext-installed=""><div id="StayFocusd-infobar" style="display:none;">
+    <img src="chrome-extension://laankejkbhbdhmipfmgcngdelahlfoji/common/img/eye_19x19_red.png">
+    <span id="StayFocusd-infobar-msg"></span>
+    <span id="StayFocusd-infobar-links">
+        <a id="StayFocusd-infobar-never-show">hide forever</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a id="StayFocusd-infobar-hide">hide once</a>
+    </span>
+</div>
+
+<h1 class="text-center">My Tool Store</h1>
+<div class="row justify-content-center">
+<table id="products" class="table table-striped table-bordered table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col" class="text-center">Title</th>
+            <th scope="col" class="text-center">Quantity</th>
+            <th scope="col" class="text-center">Price</th>
+            <th scope="col" class="text-center">Categories</th>
+        </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+    <input type="button" value="refresh" id="refresh" class="col-1">
+
+</div>
+
+
+<script src="./js/jquery-3.6.3.js"></script>
+
+<script>
+(function() {
+    "use strict";
+    // TODO: Create an AJAX GET request for the file under data/inventory.json
+
+    // TODO: Take the data from inventory.json and append it to the products table
+    var jqXhr = $.ajax('./data/inventory.json');
+    jqXhr.done(function (data){
+        let html=''
+        for(var i= 0;i<data.length;i++){
+            html+=`
+        <tr>
+            <th scope="row" class="text-center">${data[i].title}</th>
+            <th class="text-center">${data[i].quantity}</th>
+            <th class="text-center">${data[i].price}</th>
+            <th class="text-center">${data[i].categories}</th>
+        </tr>`
+            // console.log(data[i])
+        }
+        $('#insertProducts').append(html)
+    })
+      $("#refresh").click(function (){
+          location.reload(true);
+          }
+
+      );
+
+    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+    //             its contents and fields
+    //       HINT: You will want to target #insertProducts for your new HTML elements
+})();
+</script>
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
